@@ -477,10 +477,10 @@ function sane_environment_check
   assert_fish_version_compatible 2.2.0
   assert_git_version_compatible 1.9.5
 
-  debug "Verifying Git implementation is not buggy Git for Windows"
-  if cmd git --version | cmd grep -i -q windows
-    abort (which git)" is Git for Windows which is not supported."
-  end
+  # debug "Verifying Git implementation is not buggy Git for Windows"
+  # if cmd git --version | cmd grep -i -q windows
+  #   abort (which git)" is Git for Windows which is not supported."
+  # end
 
   debug "Verifying Git autocrlf is not enabled"
   if test (cmd git config core.autocrlf; or echo false) = true
